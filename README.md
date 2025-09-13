@@ -16,28 +16,34 @@ This is a full-stack authentication application built using the MERN stack (Mong
 ---
 
 ## 📁 Project Structure
-
 Authentication-System/
+├── backend/                     # Node.js + Express server
+│   ├── config/                  # Database connection & environment config
+│   ├── controllers/             # Logic for handling routes
+│   ├── middleware/              # Auth middleware, error handling
+│   ├── models/                  # Mongoose schemas (User model, etc.)
+│   ├── routes/                  # API endpoints (auth, user routes)
+│   ├── utils/                   # Helper utilities (token generation, etc.)
+│   ├── .env                     # Environment variables (not in git)
+│   ├── package.json             # Backend dependencies & scripts
+│   └── server.js                # Entry point for backend server
 │
-├── backend/ # Node.js + Express server
-│ ├── models/ # Mongoose schemas / user models
-│ ├── routes/ # API endpoints (auth, user etc.)
-│ ├── middleware/ # Middleware (authentication, error handling)
-│ ├── controllers/ # Business logic for routes
-│ ├── config/ # Configuration (DB connection, environment variables)
-│ └── server.js # Entry point of backend
+├── frontend/                    # React frontend
+│   ├── public/                  # Public assets (favicon, index.html)
+│   ├── src/
+│   │   ├── components/          # Reusable UI components (Navbar, Forms, etc.)
+│   │   ├── pages/               # Screens (Login, Signup, Dashboard)
+│   │   ├── context/             # Auth context or global state
+│   │   ├── utils/               # API calls, validation helpers
+│   │   ├── App.js               # Main app component + routing
+│   │   ├── index.js             # Entry point for React
+│   │   └── styles.css           # Global styles or Tailwind config
+│   └── package.json             # Frontend dependencies & scripts
+│   
 │
-├── frontend/ # React app
-│ ├── src/
-│ │ ├── components/ # Reusable UI components
-│ │ ├── pages/ # Login, Signup, Dashboard etc.
-│ │ ├── utils/ # Helper functions (api calls, validation etc.)
-│ │ └── App.js # Main component + routing
-│ └── public/ # Static files
-│
-├── .gitignore
-├── package.json # (for root if needed) or in each frontend/backend
-└── README.md # You’re here
+├── .gitignore                   # Files/folders ignored by git
+├── README.md                    # Main documentation file
+└── package.json (optional)       # If you manage scripts from root
 
 ## 🛠 Tech Stack
 
