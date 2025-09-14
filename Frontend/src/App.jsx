@@ -40,7 +40,7 @@ function App() {
                 </h1>
               </div>
             </div>
-            
+
             <div className="flex items-center space-x-4">
               {!isAuthenticated ? (
                 <>
@@ -67,9 +67,7 @@ function App() {
                 </>
               ) : (
                 <div className="flex items-center space-x-4">
-                  <span className="text-sm text-gray-600">
-                    Welcome !!!
-                  </span>
+                  <span className="text-sm text-gray-600">Welcome !!!</span>
                   <button
                     onClick={handleLogout}
                     className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-medium transition-colors duration-200"
@@ -87,8 +85,12 @@ function App() {
       <main>
         {!isAuthenticated ? (
           <>
-            {page === "register" && <Register onAuthSuccess={handleAuthSuccess} setPage={setPage} />}
-            {page === "login" && <Login onAuthSuccess={handleAuthSuccess} setPage={setPage} />}
+            {page === "register" && (
+              <Register onAuthSuccess={handleAuthSuccess} setPage={setPage} />
+            )}
+            {page === "login" && (
+              <Login onAuthSuccess={handleAuthSuccess} setPage={setPage} />
+            )}
           </>
         ) : (
           <Protected onLogout={handleLogout} />
@@ -99,7 +101,9 @@ function App() {
       <footer className="bg-white border-t border-gray-200 mt-auto">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <div className="text-center text-sm text-gray-500">
-            <p>&copy; 2024 AuthSystem. Built with React, Node.js, and MongoDB.</p>
+            <p>
+              &copy; 2024 AuthSystem. Built with React, Node.js, and MongoDB.
+            </p>
           </div>
         </div>
       </footer>

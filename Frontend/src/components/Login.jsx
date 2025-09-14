@@ -26,11 +26,11 @@ function Login({ onAuthSuccess, setPage }) {
         localStorage.setItem("userName", res.data.user.name);
       }
       setSuccess("Login successful! Welcome back.");
-      
+
       // Clear form
       setEmail("");
       setPassword("");
-      
+
       // Notify parent component
       if (onAuthSuccess) {
         onAuthSuccess();
@@ -46,14 +46,12 @@ function Login({ onAuthSuccess, setPage }) {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-800">
-            Welcome Back
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-800">Welcome Back</h1>
           <p className="mt-2 text-gray-500">
             Sign in to your account to continue
           </p>
         </div>
-  
+
         <form onSubmit={handleLogin} className="space-y-6">
           <div>
             <label
@@ -73,7 +71,7 @@ function Login({ onAuthSuccess, setPage }) {
               autoComplete="email"
             />
           </div>
-  
+
           <div>
             <label
               htmlFor="password"
@@ -92,7 +90,7 @@ function Login({ onAuthSuccess, setPage }) {
               autoComplete="current-password"
             />
           </div>
-  
+
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <input
@@ -108,7 +106,7 @@ function Login({ onAuthSuccess, setPage }) {
                 Remember me
               </label>
             </div>
-  
+
             <div className="text-sm">
               <a
                 href="#"
@@ -118,19 +116,19 @@ function Login({ onAuthSuccess, setPage }) {
               </a>
             </div>
           </div>
-  
+
           {error && (
             <div className="text-red-600 text-sm font-medium bg-red-50 border border-red-200 rounded-md p-3">
               {error}
             </div>
           )}
-  
+
           {success && (
             <div className="text-green-600 text-sm font-medium bg-green-50 border border-green-200 rounded-md p-3">
               {success}
             </div>
           )}
-  
+
           <button
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 rounded-lg shadow-md transition flex items-center justify-center"
@@ -165,7 +163,7 @@ function Login({ onAuthSuccess, setPage }) {
             )}
           </button>
         </form>
-  
+
         <div className="mt-6 text-center">
           <p className="text-sm text-gray-600">
             Don&apos;t have an account?{" "}
@@ -180,6 +178,6 @@ function Login({ onAuthSuccess, setPage }) {
       </div>
     </div>
   );
-};
+}
 
 export default Login;
