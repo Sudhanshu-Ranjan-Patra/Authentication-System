@@ -12,6 +12,7 @@ This is a full-stack authentication application built using the MERN stack (Mong
 - Protected routes (accessible only after login)
 - Frontend UI for login/signup & basic feedback (errors, loading states, etc.)
 - Basic validation (on both frontend and backend)
+
 ---
 
 ## 📁 Project Structure
